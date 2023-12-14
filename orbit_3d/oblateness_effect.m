@@ -1,5 +1,6 @@
 function [Omega_dot, omega_dot] = oblateness_effect(a, e, i, mu, RE, J2)
 % Inclination in degrees!
+% Output rates in rad/s
 
 if nargin < 4
     mu = 3.986e14;
