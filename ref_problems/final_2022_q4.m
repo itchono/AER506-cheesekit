@@ -20,7 +20,7 @@ rp = hohmann_from_v1(ra, va-3e3, mu);
 %% Determine impact point with Earth
 RE = 6378e3;
 theta_impact = acosd((a*(1-e^2) / RE - 1)/e);
-M_impact = theta_deg_to_M(theta_impact, e);
+[M_impact, E_impact] = theta_deg_to_M(theta_impact, e);
 T_impact = M_to_tof(M_impact, pi, a, mu);
 
 disp(T_impact)
